@@ -1,0 +1,218 @@
+/* Global Variables */
+:root {
+    --white: #FFFFFF;
+    --bg-black: #2A2A2A;
+    --bg-dark-navy: rgb(28, 34, 56);
+    --bg-dark-gray: #353535;
+    --bg-light-gray: rgba(255, 255, 255, .1);
+}
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+html, body, div, header, ul, li, main, a, section, img, button, p {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 1rem;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    background-color: inherit;
+}
+
+button:hover {
+    background: none;
+}
+
+/* Screen Reader Only */
+.blind {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+/* Style */
+#appGoogleHome {
+    height: 100vh;
+    background-color: var(--bg-dark-gray);
+}
+
+/* Header Style */
+.head {
+    padding: 20px;
+}
+
+.head .head-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.head .head-list li + li{
+    margin-left: 20px;
+}
+
+.head-list .head-more {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+}
+
+.head-list .head-more span{
+    width: 3px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.head-list .head-profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* Main Style */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .sec-logo {
+    padding: 16px 24px;
+    margin-bottom: 40px;
+    background-color: var(--bg-dark-navy);
+    border-radius: 20px;
+}
+
+.sec-logo .img-logo{
+    width: 400px;
+}
+
+.main .sec-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: var(--white);
+}
+
+.sec-search .inp-search {
+    width: 450px;
+    margin: 0 15px;
+    border-style: none;
+}
+
+.sec-shortcut .shortcut-list {
+    width: 560px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 100px;
+}
+
+.shortcut-list li{
+    border-radius: 5px;
+}
+
+.shortcut-list li:hover{
+    background-color: var(--bg-light-gray);
+}
+
+.shortcut-list li:hover .shortcut-more{
+    opacity: 1;
+}
+
+.shortcut-list .shortcut-module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 112px;
+    padding: 16px 0;
+}
+
+.shortcut-list .shortcut-item {
+    position: relative;
+}
+
+.shortcut-list .shortcut-item .img-item {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: var(--bg-black);
+}
+
+.shortcut-list p[class^="tit-"] {
+    font-size: 13px;
+}
+
+.shortcut-list .shortcut-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 28px;
+    height: 28px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.shortcut-list .shortcut-more:hover {
+    background-color: var(--bg-light-gray);
+}
+
+.shortcut-list .shortcut-more span{
+    width: 3px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.shortcut-list .shortcut-plus .icon-plus {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: var(--bg-black);
+}
+
+.shortcut-list .shortcut-plus .icon-plus span {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: var(--white);
+}
+
+.shortcut-list .shortcut-plus .icon-plus span:nth-child(1){
+    transform: rotate(90deg);
+}
