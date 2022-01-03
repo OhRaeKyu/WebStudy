@@ -1,0 +1,16 @@
+.input-file {
+    position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+.custom-label{
+    padding: 0 100px;
+    border-radius: 10px;
+    font-size: 3rem;
+    color: #FFF;
+    background-color: grey;
+}

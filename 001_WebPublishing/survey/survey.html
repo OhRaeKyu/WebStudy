@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./survey.css">
+    <title>survey</title>
+</head>
+<body>
+    <div id="app">
+        <h1>form 태그 연습용 설문지입니다.</h1>
+        <form action="#">
+            <h2>설문 영역</h2>
+            <ol>
+                <li>
+                    <fieldset>
+                        <legend><h3>좋아하는 과목을 고르세요.(택 1)</h3></legend>
+                        <label>
+                            <input type="radio" name="favSub" id="">
+                            HTML
+                        </label>
+                        <label>
+                            <input type="radio" name="favSub" id="">
+                            CSS
+                        </label>
+                        <label>
+                            <input type="radio" name="favSub" id="">
+                            JS
+                        </label>
+                    </fieldset>
+                </li>
+                <li>
+                    <fieldset>
+                        <legend><h3>스터디할 과목을 고르세요.(다중선택 가능)</h3></legend>
+                        <label>
+                            <input type="checkbox" name="stuSub" id="">
+                            HTML/CSS
+                        </label>
+                        <label>
+                            <input type="checkbox" name="stuSub" id="">
+                            Vanilla JS
+                        </label>
+                        <label>
+                            <input type="checkbox" name="stuSub" id="">
+                            React
+                        </label>
+                        <label>
+                            <input type="checkbox" name="stuSub" id="">
+                            Vue JS
+                        </label>
+                        <label>
+                            <input type="checkbox" name="stuSub" id="">
+                            Node JS
+                        </label>
+                    </fieldset>
+                </li>
+                <li>
+                    <fieldset>
+                        <legend><h3>신분증을 첨부해주세요.</h3></legend>
+                        <input type="file" name="" id="inpFile" class="input-file">
+                        <label for="inpFile" class="custom-label">
+                            +
+                        </label>
+                    </fieldset>
+                </li>
+            </ol>
+        </form>
+    </div>
+</body>
+</html>
