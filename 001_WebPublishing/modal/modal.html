@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal.css">
+    <title>modal</title>
+</head>
+<body> 
+    <div class="dimm">
+        <div class="cloud">
+            <img src="./assets/cloud.png" alt="구름" class="cloud-01">
+            <img src="./assets/cloud.png" alt="구름" class="cloud-02">
+            <img src="./assets/cloud.png" alt="구름" class="cloud-03">
+        </div>
+    </div>
+    <div class="modalWrap"> 
+        <article class="contents">
+            MODAL
+        </article>
+        <div class="ball"></div>
+        <img class="trans-img" src="./assets/fox.png" alt="fox">
+
+        <a href="javascript:void(0);" class="btn prev" id="prevBtn">&lt;</a>
+        <a href="javascript:void(0);" class="btn next" id="nextBtn">&gt;</a>
+
+        <ul class="indicator">
+            <li>
+                <a href="#" class="list-slide on">
+                    <span class="blind">1번 슬라이드</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="list-slide">
+                    <span class="blind">2번 슬라이드</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="list-slide">
+                    <span class="blind">3번 슬라이드</span>
+                </a>
+            </li>
+        </ul>
+
+        <button type="button" class="btnClose">
+            X
+        </button>
+    </div>
+    <script src="modal.js"></script>
+</body>
+</html>

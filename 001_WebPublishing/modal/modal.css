@@ -1,0 +1,205 @@
+/* Reset CSS */
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+} 
+
+/* Screen Reader Only */
+.blind {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+/* Style */
+.dimm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cloud .cloud-01 {
+    position: fixed;
+    top: 60%;
+    left: -5%;
+    animation: cloudMove 10s infinite alternate;
+}
+
+.cloud .cloud-02 {
+    position: fixed;
+    top: 30%;
+    left: -5%;
+    animation: cloudMove 8s infinite alternate-reverse;
+}
+
+.cloud .cloud-03 {
+    position: fixed;
+    top: 10%;
+    left: -5%;
+    animation: cloudMove 60s infinite alternate;
+}
+
+@keyframes cloudMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(100vw + 150%));
+    }
+}
+
+.modalWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 40vh;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    /* overflow: hidden; */
+}
+
+.modalWrap:hover {
+    box-shadow: 0 0 50px rgba(255, 100, 0, 0.7);
+    transition: all .5s;
+}
+
+.modalWrap .trans-img {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.modalWrap:hover .trans-img {
+    transform: translate(-50%, -150px);
+    opacity: 1;
+}
+
+.modalWrap .ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 100, 0, 0.7);
+    animation: rotateBall 10s infinite;
+}
+
+@keyframes rotateBall {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(640px, 0);
+    }
+    50% {
+        transform: translate(640px, calc(40vh - 60px));
+    }
+    75% {
+        transform: translate(0, calc(40vh - 60px));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.modalWrap .btn {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 44px;
+    color: #FFF;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+.modalWrap .btn:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+    transition: all .5s;
+}
+
+.modalWrap .btn:active {
+    background-color: #000;
+}
+
+.modalWrap .btn.prev{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+
+.modalWrap .btn.next{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+
+.modalWrap .indicator {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 5%;
+    width: 100px;
+}
+
+.modalWrap .indicator .list-slide {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.modalWrap .indicator .list-slide.on {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.modalWrap .btnClose {
+    position: fixed;
+    top: 0;
+    transform: translateY(0);
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    line-height: 40px;
+    color: #FFF;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: all 2s;
+}
+
+.modalWrap .btnClose:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalWrap:hover .btnClose {
+    opacity: 1;
+    transform: translateY(-100px);
+}
