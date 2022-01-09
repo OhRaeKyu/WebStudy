@@ -1,4 +1,4 @@
-# 001_WebPublishing
+# 1_HTML_CSS
 <ul>
     <li><a href="https://ohraekyu.github.io/WebStudy/001_WebPublishing/google/google.html">Google Clone(Home)</a> : This is clone of Google Home.</li>
     <li><a href="https://github.com/OhRaeKyu/WebStudy/tree/main/001_WebPublishing/naver">Google Markup(Home, Agree, Info)</a> : This is markup of Naver Home, Agree to the terms and conditions, join membership</li>

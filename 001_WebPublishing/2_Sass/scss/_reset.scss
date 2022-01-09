@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+// 주석문
+// - 컴파일 제외
+/* - 컴파일 포함 */
+
+// 볼드체를 일반체로
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+// 기울임체를 일반체로
+i, em, address {
+    font-style: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, ol, li, blockquote, fieldset, legend {
+    margin: 0;
+    padding: 0;
+}
+
+strong, b, th {
+    font-weight: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+mark {
+    background-color: transparent;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid red;
+}
+
+fieldset {
+    border: none;
+}
+
+input[type="text"]::placeholder {
+    color: red;
+}
+
+input[type="search"] {
+
+}

@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.target {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    color: white;
+
+    .inner {
+        border: 1px solid white;
+        border-radius: 15px;
+        padding: 20px;
+        height: 200px;
+        overflow: auto;
+        margin: 100px auto;
+        max-width: 500px;
+    }
+    
+    h1 {
+        font-size: 100px;
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+
+    img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
