@@ -1,0 +1,120 @@
+@charset "utf-8";
+@import './reset';
+
+$WHITE: #ffffff;
+$GRAY: #dadada;
+$LIGHT_GRAY: #f5f6f7;
+$DARK_GRAY: #8e8e8e;
+$GREEN: #08a600;
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $LIGHT_GRAY;
+}
+
+.logo {
+  display: block;
+  width: 240px;
+  height: 44px;
+  background-image: url(https://static.nid.naver.com/images/ui/join/m_naver_logo_20191126.png);
+  background-size: cover;
+  margin: 60px auto
+}
+
+.sec-form {
+  width: 460px;
+  
+  .check {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  .check-all {
+    padding-left: 35px;
+    margin-bottom: 30px;
+    line-height: 21px;
+    text-decoration: underline;
+  }
+
+  .check-all::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url(https://static.nid.naver.com/images/ui/myinfo/m_check_off_24.png) no-repeat 0 0;
+    background-size: cover;
+  }
+
+  .check-all.on::before {
+    background-image: url(https://static.nid.naver.com/images/ui/myinfo/m_check_on_l_24.png);
+  }
+
+  .list-agree {
+    .item-agree + .item-agree {
+      margin-top: 30px;
+    }
+    
+    .item-agree {
+      position: relative;
+
+      .check-one {
+        padding-left: 30px;
+        margin-bottom: 1rem;
+
+        .necessity {
+          font-size: 0.75rem;
+          color: $GREEN;
+        }
+
+        .necessity.option {
+          color: $DARK_GRAY;
+        }
+      }
+
+      .check-one::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: url(https://static.nid.naver.com/images/ui/myinfo/m_chcek_off_s_20.png) no-repeat 0 0;
+        background-size: cover;
+      }
+
+      .check-one.on::before {
+        background-image: url(https://static.nid.naver.com/images/ui/myinfo/m_chcek_on_s_20.png);
+      }
+
+      .guide-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 6px 8px;
+        border: 1px solid $GREEN;
+        font-size: 0.75rem;
+        color: $GREEN;
+      }
+
+      .cont-agree {
+        overflow: auto;
+        padding: 12px;
+        height: 88px;
+        border: 1px solid $GRAY;
+        font-size: 0.75rem;
+        background-color: $WHITE;
+      }
+    }
+  }
+}

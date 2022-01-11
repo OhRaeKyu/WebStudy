@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>
+      <a href="https://www.naver.com" class="logo"></a>
+    </h1>
+    <form action="#" class="sec-form">
+      <label class="check check-all">
+        <input type="checkbox" name="agree" id="" class="blind">
+        네이버 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 정보 수신(선택)에 모두 동의합니다.
+      </label>
+      <ul class="list-agree">
+        <li class="item-agree">
+          <label class="check check-one">
+            <input type="checkbox" name="agree" id="" required class="blind">
+            네이버 이용약관 동의
+            <span class="necessity">(필수)</span>
+          </label>
+          <div class="cont-agree">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, explicabo? Pariatur modi repellendus corrupti illo dolore aspernatur explicabo debitis eos minima asperiores provident nisi, atque laborum quia iusto numquam veritatis iure ipsam non doloremque? Obcaecati, ratione dolores quae accusantium, illo quia ex aperiam sunt suscipit eos perferendis? Nesciunt aliquid culpa soluta magni nostrum quis non quae cupiditate explicabo commodi deserunt adipisci a porro voluptatem labore laboriosam illo cumque laudantium enim deleniti pariatur fugiat, facere dolore fugit. Sapiente tempore, rerum veniam distinctio et laboriosam similique quibusdam aliquid magni voluptas accusantium, quo ex, odit sint officiis necessitatibus? Similique mollitia et blanditiis minima?
+          </div>
+        </li>
+        <li class="item-agree">
+          <label class="check check-one">
+            <input type="checkbox" name="agree" id="" required class="blind">
+            개인정보 수집 및 이용 동의
+            <span class="necessity">(필수)</span>
+          </label>
+          <a href="https://nid.naver.com/user2/V2Join?m=kidGuide" target="_blank" class="guide-child">어린이용 안내</a>
+          <div class="cont-agree">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, explicabo? Pariatur modi repellendus corrupti illo dolore aspernatur explicabo debitis eos minima asperiores provident nisi, atque laborum quia iusto numquam veritatis iure ipsam non doloremque? Obcaecati, ratione dolores quae accusantium, illo quia ex aperiam sunt suscipit eos perferendis? Nesciunt aliquid culpa soluta magni nostrum quis non quae cupiditate explicabo commodi deserunt adipisci a porro voluptatem labore laboriosam illo cumque laudantium enim deleniti pariatur fugiat, facere dolore fugit. Sapiente tempore, rerum veniam distinctio et laboriosam similique quibusdam aliquid magni voluptas accusantium, quo ex, odit sint officiis necessitatibus? Similique mollitia et blanditiis minima?
+          </div>
+        </li>
+        <li class="item-agree">
+          <label class="check check-one">
+            <input type="checkbox" name="agree" id="" class="blind">
+            위치정보 이용약관 동의
+            <span class="necessity option">(선택)</span>
+          </label>
+          <div class="cont-agree">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, explicabo? Pariatur modi repellendus corrupti illo dolore aspernatur explicabo debitis eos minima asperiores provident nisi, atque laborum quia iusto numquam veritatis iure ipsam non doloremque? Obcaecati, ratione dolores quae accusantium, illo quia ex aperiam sunt suscipit eos perferendis? Nesciunt aliquid culpa soluta magni nostrum quis non quae cupiditate explicabo commodi deserunt adipisci a porro voluptatem labore laboriosam illo cumque laudantium enim deleniti pariatur fugiat, facere dolore fugit. Sapiente tempore, rerum veniam distinctio et laboriosam similique quibusdam aliquid magni voluptas accusantium, quo ex, odit sint officiis necessitatibus? Similique mollitia et blanditiis minima?
+          </div>
+        </li>
+        
+      </ul>
+    </form>
+  </div>
+  <script>
+    const checkBtn = document.querySelectorAll(".check");
+    checkBtn.forEach(ele => {
+      ele.children[0].addEventListener("click", () => {
+        if (!ele.classList.contains("on")) {
+          ele.classList.add("on")
+        } else {
+          ele.classList.remove("on")
+        }
+      });
+    })
+  </script>
+</body>
+</html>

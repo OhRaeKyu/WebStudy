@@ -1,0 +1,126 @@
+body, div, form, label, input, h1, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blind {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f6f7;
+}
+
+.logo {
+  display: block;
+  width: 240px;
+  height: 44px;
+  background-image: url(https://static.nid.naver.com/images/ui/join/m_naver_logo_20191126.png);
+  background-size: cover;
+  margin: 60px auto;
+}
+
+.sec-form {
+  width: 460px;
+}
+.sec-form .check {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.sec-form .check-all {
+  padding-left: 35px;
+  margin-bottom: 30px;
+  line-height: 21px;
+  text-decoration: underline;
+}
+.sec-form .check-all::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url(https://static.nid.naver.com/images/ui/myinfo/m_check_off_24.png) no-repeat 0 0;
+  background-size: cover;
+}
+.sec-form .check-all.on::before {
+  background-image: url(https://static.nid.naver.com/images/ui/myinfo/m_check_on_l_24.png);
+}
+.sec-form .list-agree .item-agree + .item-agree {
+  margin-top: 30px;
+}
+.sec-form .list-agree .item-agree {
+  position: relative;
+}
+.sec-form .list-agree .item-agree .check-one {
+  padding-left: 30px;
+  margin-bottom: 1rem;
+}
+.sec-form .list-agree .item-agree .check-one .necessity {
+  font-size: 0.75rem;
+  color: #08a600;
+}
+.sec-form .list-agree .item-agree .check-one .necessity.option {
+  color: #8e8e8e;
+}
+.sec-form .list-agree .item-agree .check-one::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(https://static.nid.naver.com/images/ui/myinfo/m_chcek_off_s_20.png) no-repeat 0 0;
+  background-size: cover;
+}
+.sec-form .list-agree .item-agree .check-one.on::before {
+  background-image: url(https://static.nid.naver.com/images/ui/myinfo/m_chcek_on_s_20.png);
+}
+.sec-form .list-agree .item-agree .guide-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 8px;
+  border: 1px solid #08a600;
+  font-size: 0.75rem;
+  color: #08a600;
+}
+.sec-form .list-agree .item-agree .cont-agree {
+  overflow: auto;
+  padding: 12px;
+  height: 88px;
+  border: 1px solid #dadada;
+  font-size: 0.75rem;
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
