@@ -1,24 +1,10 @@
 @charset "utf-8";
 
-@import "./reset";
+@import "./variables";
+@import "./reset", "./header", "./main";
 
 .wrap {
   width: 100vw;
-}
-
-.header {
-  // position: fixed;
-  display: flex;
-  justify-content: space-between;
-  height: 110px;
-}
-
-.header.on {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.main {
-
 }
 
 // http://www.einsmedia.co.kr/uploads/media/mvis_01.jpg
