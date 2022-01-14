@@ -1,5 +1,186 @@
 @charset "utf-8";
 
 .main {
+  width: 100vw;
+  height: 100vh;
 
+  .content-1 {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(http://www.einsmedia.co.kr/uploads/media/mvis_01.jpg);
+    color: $WHITE;
+
+    .btn-wrap {
+      font-size: 1.125rem;
+      font-weight: 500;
+      transform: rotate(-90deg);
+      // width: 200px;
+      text-align: center;
+
+      * {
+        color: $WHITE;
+      }
+    }
+
+    .tit-parag {
+      font-size: 4.5rem;
+      font-weight: 600;
+    }
+
+    .cont-parag {
+      font-size: 1.375rem;
+    }
+
+    .lst-SNS {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100px;
+      
+      .item-SNS {
+        display: inline-block;
+        font-size: 0;
+      }
+
+      li:nth-child(1) .item-SNS {
+        width: 16px;
+        height: 13px;
+        background-image: url(http://www.einsmedia.co.kr/uploads/media/ic_tw.png);
+        background-size: cover;
+      }
+
+      li:nth-child(2) .item-SNS {
+        width: 8px;
+        height: 18px;
+        background-image: url(http://www.einsmedia.co.kr/uploads/media/ic_fb.png);
+        background-size: cover;
+      }
+
+      li:nth-child(3) .item-SNS {
+        width: 14px;
+        height: 14px;
+        background-image: url(http://www.einsmedia.co.kr/uploads/media/ic_nv.png);
+        background-size: cover;
+      }
+    }
+  }
+
+  .indicator {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $WHITE;
+
+      &.on {
+        background-color: $RED;
+      }
+    }
+  }
+}
+
+.btn-aside {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  color: $WHITE;
+  text-align: center;
+
+  .lst-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: $RED;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    // &:hover {
+    //   height: 240px;
+
+    //   li {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+
+    //     &:nth-child(1) {
+    //       .item-cont {
+    //         display: inline-block;
+    //       }
+    //     }
+  
+    //     &:nth-child(2) {
+    //       display: inline-block;
+    //     }
+  
+    //     &:nth-child(3) {
+    //       display: inline-block;
+    //     }
+    //   }
+    // }
+
+    li {
+      &:nth-child(1) {
+        .item-cont {
+          display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    .item-cont {
+      font-size: 0.75rem;
+    }
+
+    .item-ad {
+      width: 29px;
+      height: 34px;
+      background-image: url(http://www.einsmedia.co.kr/uploads/media/ic_ad.png);
+      background-size: cover;
+    }
+
+    .item-product {
+      width: 33px;
+      height: 29px;
+      background-image: url(http://www.einsmedia.co.kr/uploads/media/ic_guide.png);
+      background-size: cover;
+    }
+
+    .item-company {
+      width: 21px;
+      height: 27px;
+      background-image: url(http://www.einsmedia.co.kr/uploads/media/ic_doc.png);
+      background-size: cover;
+    }
+  }
+
+  .btn-top {
+    cursor: pointer;
+  }
 }
