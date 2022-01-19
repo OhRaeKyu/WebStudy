@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@mixin sectionTemp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+@mixin pseudoEle {
+  content: '';
+  display: block;
+  position: absolute;
+}
