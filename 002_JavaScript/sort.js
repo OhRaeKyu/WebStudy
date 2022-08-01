@@ -23,7 +23,7 @@ console.log(result1);
 let result2 = [];
 let arr2 = [10, 11, 9, 3, 2, 6, 5, 1];
 
-const getInsertIndex = (arr, value) => {
+const getInsertIndex = function (arr, value) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > value) {
       return i;
@@ -32,14 +32,13 @@ const getInsertIndex = (arr, value) => {
   return arr.length;
 };
 
-const insertionSort = (arr) => {
+const insertionSort = function (arr) {
   let sortedArr = [];
   const arrLength = arr.length;
 
   for (let i = 0; i < arrLength; i++) {
-    let insertValue = arr.shift();
-    let insertIndex = getInsertIndex(sortedArr, insertValue);
-    sortedArr.splice(insertIndex, 0, insertValue);
+    const insertIndex = getInsertIndex(sortedArr, arr[i]);
+    sortedArr.splice(insertIndex, 0, arr[i]);
   }
   return sortedArr;
 };
@@ -51,14 +50,15 @@ console.log(result2);
 // 분할, 정복을 통해 값을 비교하여 정렬한다.
 let result3 = [];
 let arr3 = [10, 11, 9, 3, 2, 6, 5, 1];
-const mergeSort = (arr) => {
+
+const mergeSort = function (arr) {
   let sortedArr = [];
   const arrLength = arr.length;
 
   if (arrLength <= 1) {
     return arr;
   } else {
-    let mid = parseInt(arrLength / 2);
+    let mid = Math.floor(arrLength / 2);
     let prevArr = mergeSort(arr.slice(0, mid));
     let nextArr = mergeSort(arr.slice(mid));
 
@@ -70,11 +70,11 @@ const mergeSort = (arr) => {
       }
     }
 
-    while (prevArr != 0) {
+    while (prevArr.length != 0) {
       sortedArr.push(prevArr.shift());
     }
 
-    while (nextArr != 0) {
+    while (nextArr.length != 0) {
       sortedArr.push(nextArr.shift());
     }
 
@@ -89,12 +89,13 @@ console.log(result3);
 let result4 = [];
 let arr4 = [10, 11, 9, 3, 2, 6, 5, 1];
 
-const quickSort = (arr) => {
+const quickSort = function (arr) {
   const arrLength = arr.length;
+
   if (arrLength <= 1) {
     return arr;
   } else {
-    const pivot = [arr.shift()];
+    const pivot = arr.shift();
     let prevArr = [];
     let nextArr = [];
 
@@ -105,6 +106,7 @@ const quickSort = (arr) => {
         nextArr.push(value);
       }
     }
+
     return quickSort(prevArr).concat(pivot, quickSort(nextArr));
   }
 };
