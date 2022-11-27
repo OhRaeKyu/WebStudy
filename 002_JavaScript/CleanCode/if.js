@@ -1,3 +1,4 @@
+// if-else 조건문 리팩터링
 const condition_1 = true;
 const condition_2 = false;
 const condition_3 = true;
@@ -17,7 +18,7 @@ const testFunction_1 = () => {
 };
 
 // 후
-const testFunction_2 = () => {
+const refactoringTestFunction_1 = () => {
   if (condition_1) {
     return true;
   }
@@ -25,7 +26,7 @@ const testFunction_2 = () => {
 };
 
 console.log(testFunction_1());
-console.log(testFunction_2());
+console.log(refactoringTestFunction_1());
 
 /*
   - else 문 Early Return하기
@@ -35,7 +36,7 @@ console.log(testFunction_2());
 */
 
 // 전
-const testFunction_3 = () => {
+const testFunction_2 = () => {
   if (condition_1) {
     if (condition_2) {
       if (condition_3) {
@@ -50,7 +51,7 @@ const testFunction_3 = () => {
 };
 
 // 후
-const testFunction_4 = () => {
+const refactoringTestFunction_2 = () => {
   if (!condition_1) return;
 
   if (!condition_2) {
@@ -64,5 +65,5 @@ const testFunction_4 = () => {
   return 'condition_3 : false';
 };
 
-console.log(testFunction_3());
-console.log(testFunction_4());
+console.log(testFunction_2());
+console.log(refactoringTestFunction_2());
