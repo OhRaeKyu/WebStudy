@@ -63,6 +63,40 @@ const reducerMap = {
 const refactoringReducer = (state = initState, action) =>
   reducerMap[action.type](state, action) || state;
 
+this.state = reducer(this.state, { type: 'addTodo', data: '1' });
+this.state = reducer(this.state, { type: 'addTodo', data: '2' });
+this.state = reducer(this.state, { type: 'addTodo', data: '3' });
+this.state = reducer(this.state, {
+  type: 'updateTodo',
+  targetIndex: 0,
+  data: '4',
+});
+this.state = reducer(this.state, { type: 'removeTodo', targetIndex: 1 });
+console.log(this.state);
+
+this.refactoringState = refactoringReducer(this.refactoringState, {
+  type: 'addTodo',
+  data: '1',
+});
+this.refactoringState = refactoringReducer(this.refactoringState, {
+  type: 'addTodo',
+  data: '2',
+});
+this.refactoringState = refactoringReducer(this.refactoringState, {
+  type: 'addTodo',
+  data: '3',
+});
+this.refactoringState = refactoringReducer(this.refactoringState, {
+  type: 'updateTodo',
+  targetIndex: 0,
+  data: '4',
+});
+this.refactoringState = refactoringReducer(this.refactoringState, {
+  type: 'removeTodo',
+  targetIndex: 1,
+});
+console.log(this.refactoringState);
+
 /*
   - 배열 활용하기
   위와 같이 리팩터링 가능하나 key를 연속된 숫자로 표현 가능할 경우
@@ -99,8 +133,7 @@ const gradeMap = ['F', 'D', 'C', 'B', 'A'];
 
 const refactoringGetGrade = (score) => {
   const defaultSwitchPoint = 6;
-  const switchPoint =
-    Math.max(Math.floor(score / 10), defaultSwitchPoint) - defaultSwitchPoint;
+  const switchPoint = Math.max(Math.floor(score / 10) - defaultSwitchPoint, 0);
   return gradeMap[switchPoint];
 };
 
